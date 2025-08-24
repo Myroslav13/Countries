@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react"
-
 interface Props {
     mode: boolean;
     setMode: React.Dispatch<React.SetStateAction<boolean>>;

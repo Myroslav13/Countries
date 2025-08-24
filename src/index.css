@@ -22,9 +22,6 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -73,4 +70,44 @@ button:focus-visible {
 
 .btn-change-mode:hover {
   border: 1px solid transparent !important;
+}
+
+.dropdown-menu, .dropdown-toggle {
+  width: 190px;
+}
+
+.dropdown-toggle {
+  box-shadow: 1px 1px 10px lightgray;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-toggle:hover {
+  border: 1px solid transparent;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}
+
+.input-wrapper {
+  box-shadow: 1px 1px 10px lightgray;
+  border-radius: 5px;
+  height: 60px;
+  width: 400px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 25px 10px 25px;
+}
+
+.input-wrapper input {
+  border: none;
+  width: 100%;
+}
+
+.input-wrapper input:focus {
+  outline: none;
 }
