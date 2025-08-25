@@ -74,6 +74,12 @@ button:focus-visible {
   background-color: #2b3743;
 }
 
+.div-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .btn-change-mode {
   width: 160px;
   background-color: white;
@@ -132,6 +138,10 @@ button:focus-visible {
   color: white;
 }
 
+.dropdown-menu.dark-mode .dropdown-item:hover {
+  color: gray;
+}
+
 .input-wrapper {
   box-shadow: 1px 1px 10px lightgray;
   border-radius: 5px;
@@ -174,6 +184,7 @@ button:focus-visible {
   box-shadow: 1px 1px 10px lightgray;
   cursor: pointer;
   border-radius: 5px;
+  width: 19rem;
 }
 
 .card.dark-mode {
@@ -205,4 +216,59 @@ p {
   background-color: #2b3743;
   box-shadow: 1px 1px 10px #1e2b34;
   color: white;
+}
+
+.div-row {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .div-row {
+    justify-content: space-between;
+  }
+
+  .div-search {
+    display: flex;
+    align-items: start;
+    gap: 40px;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .input-wrapper {
+    width: 100%;
+  }
+
+  .card { 
+    width: 90%;
+  }
+
+  .div-upper-component h1 {
+    font-size: 14px !important;
+  }
+
+  .btn-change-mode {
+    font-size: 14px !important;
+  }
+
+  .btn-back {
+    border-radius: 3px !important;
+  }
+  
+  .col-12 {
+    padding-right: 0;
+  }
+
+  .img-flag-detailed {
+    width: 249px !important;
+  }
+}
+
+@media (max-width: 452px) {
+  .div-row .col-12 {
+    padding-right: 20px;
+  }
 }
