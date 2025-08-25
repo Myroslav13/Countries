@@ -68,10 +68,29 @@ button:focus-visible {
   box-shadow: 1px 1px 10px lightgray;
 }
 
+.div-upper-component.dark-mode {
+  box-shadow: 1px 1px 10px #1e2b34;
+  color: white;
+  background-color: #2b3743;
+}
+
 .btn-change-mode {
   width: 160px;
   background-color: white;
   width: fit-content;
+}
+
+.btn-change-mode.dark-mode {
+  background-color: #2b3743;
+  color: white;
+}
+
+.div-app {
+  height: 100%;
+}
+
+.div-app.dark-mode {
+  background-color: #202d36;
 }
 
 .btn-change-mode:hover {
@@ -90,12 +109,27 @@ button:focus-visible {
   justify-content: space-between;
 }
 
+.dropdown-toggle.dark-mode {
+  box-shadow: 1px 1px 10px #1e2b34;
+  background-color: #2b3743;
+  color: white;
+}
+
 .dropdown-toggle:hover {
   border: 1px solid transparent;
 }
 
 .dropdown-item {
   cursor: pointer;
+}
+
+.dropdown-menu.dark-mode {
+  background-color: #2b3743;
+}
+
+.dropdown-menu.dark-mode .dropdown-item {
+  background-color: #2b3743;
+  color: white;
 }
 
 .input-wrapper {
@@ -109,9 +143,27 @@ button:focus-visible {
   padding: 10px 25px 10px 25px;
 }
 
+.input-wrapper.dark-mode {
+  box-shadow: 1px 1px 10px #1e2b34;
+  background-color: #2b3743;
+}
+
 .input-wrapper input {
   border: none;
   width: 100%;
+}
+
+.input-wrapper.dark-mode input {
+  background-color: #2b3743;
+  color: white;
+}
+
+.input-wrapper.dark-mode input::placeholder {
+  color: white;
+}
+
+.input-wrapper.dark-mode i {
+  filter: brightness(0) invert(1);
 }
 
 .input-wrapper input:focus {
@@ -122,6 +174,12 @@ button:focus-visible {
   box-shadow: 1px 1px 10px lightgray;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.card.dark-mode {
+  box-shadow: 1px 1px 10px #1e2b34;
+  background-color: #2b3743;
+  color: white;
 }
 
 .flag-img {
@@ -143,3 +201,8 @@ p {
   padding: 0;
 }
 
+.btn-back.dark-mode {
+  background-color: #2b3743;
+  box-shadow: 1px 1px 10px #1e2b34;
+  color: white;
+}

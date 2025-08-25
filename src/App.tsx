@@ -11,9 +11,9 @@ function App() {
   const [oneCountryDisplay, setOneCountryDisplay] = useState<Country | null>(null)
   
   return (
-    <div>
+    <div className={`div-app ${mode === true ? "dark-mode" : ""}`}>
       <UpperComponent mode={mode} setMode={setMode}></UpperComponent>
-      <SearchComponent mode={mode} filter={filter} setFilter={setFilter} filterSearch={filterSearch} setFilterSearch={setFilterSearch} oneCountryDisplay={oneCountryDisplay} setOneCountryDisplay={setOneCountryDisplay}></SearchComponent>
+      <SearchComponent mode={mode} setFilter={setFilter} filterSearch={filterSearch} setFilterSearch={setFilterSearch} oneCountryDisplay={oneCountryDisplay} setOneCountryDisplay={setOneCountryDisplay}></SearchComponent>
       <CountryList mode={mode} filter={filter} filterSearch={filterSearch} oneCountryDisplay={oneCountryDisplay} setOneCountryDisplay={setOneCountryDisplay}></CountryList>
     </div>
   )
