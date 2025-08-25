@@ -1,10 +1,7 @@
 export interface Country {
-  cca3: string;
-  name: {
-    common: string;
-  };
+  name: { common: string };
+  flags: { svg: string };
+  capital: string[];
+  region: string;
   population: number;
-  flags: {
-    svg: string;
-  };
 }

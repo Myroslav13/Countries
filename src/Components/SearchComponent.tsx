@@ -23,7 +23,7 @@ function SearchComponent({mode, filter, setFilter, setFilterSearch}: Props) {
 
             <ul className="dropdown-menu">
                 <li><a className="dropdown-item" onClick={() => setFilter(1)}>Africa</a></li>
-                <li><a className="dropdown-item" onClick={() => setFilter(2)}>America</a></li>
+                <li><a className="dropdown-item" onClick={() => setFilter(2)}>Americas</a></li>
                 <li><a className="dropdown-item" onClick={() => setFilter(3)}>Asia</a></li>
                 <li><a className="dropdown-item" onClick={() => setFilter(4)}>Europa</a></li>
                 <li><a className="dropdown-item" onClick={() => setFilter(5)}>Oceania</a></li>

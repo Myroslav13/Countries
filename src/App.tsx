@@ -12,7 +12,7 @@ function App() {
     <div>
       <UpperComponent mode={mode} setMode={setMode}></UpperComponent>
       <SearchComponent mode={mode} filter={filter} setFilter={setFilter} setFilterSearch={setFilterSearch}></SearchComponent>
-      <CountryList mode={mode}></CountryList>
+      <CountryList mode={mode} filter={filter} filterSearch={filterSearch}></CountryList>
     </div>
   )
 }

@@ -66,6 +66,7 @@ button:focus-visible {
 .btn-change-mode {
   width: 160px;
   background-color: white;
+  width: fit-content;
 }
 
 .btn-change-mode:hover {
@@ -110,4 +111,15 @@ button:focus-visible {
 
 .input-wrapper input:focus {
   outline: none;
+}
+
+.card {
+  box-shadow: 1px 1px 10px lightgray;
+  cursor: pointer;
+}
+
+.flag-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
 }
