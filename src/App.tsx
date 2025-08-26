@@ -5,7 +5,7 @@ import SearchComponent from "./Components/SearchComponent"
 import type { Country } from "./interfaces"
 
 function App() {
-  const [mode, setMode] = useState(true)
+  const [mode, setMode] = useState(false)
   const [filter, setFilter] = useState(0)
   const [filterSearch, setFilterSearch] = useState("")
   const [oneCountryDisplay, setOneCountryDisplay] = useState<Country | null>(null)

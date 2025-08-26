@@ -15,11 +15,11 @@ function CountryList({mode, width, filter, filterSearch, oneCountryDisplay, setO
     const filterLink = ["", "Africa", "Americas", "Asia", "Europe", "Oceania"]
 
     useEffect(() => {
-        fetch("https://restcountries.com/v3.1/all?fields=name,flags,capital,region,subregion,population,tld,currencies,cca3,borders")
+        fetch("https://restcountries.com/v3.1/all?fields=name,flags,capital,region,subregion,population,currencies,tld,borders,languages")
         .then(response => response.json())
         .then(data => setCountriesData(data))
-    })
-    
+    }, []);
+
     return (
         <>
             {oneCountryDisplay === null? 
@@ -64,20 +64,19 @@ function CountryList({mode, width, filter, filterSearch, oneCountryDisplay, setO
                                     <p><b>Capital:</b> {oneCountryDisplay.capital}</p>
                                 </div>
                                 
-                                <div className="pt-5 pt-sm-auto">
-                                    <p><b>Native Name:</b> {Object.values(oneCountryDisplay.name.nativeName || {})[0]?.common}</p>
+                                <div className="pt-5 pt-sm-0">
+                                    <p><b>Top Level Domain:</b> {oneCountryDisplay.tld?.join(", ")}</p>
                                     <p><b>Currencies:</b> {oneCountryDisplay.currencies ? Object.values(oneCountryDisplay.currencies).map(c => c.name).join(", ") : "-"}</p>
                                     <p><b>Languages:</b> {oneCountryDisplay.languages ? Object.values(oneCountryDisplay.languages).join(", ") : "-"}</p>
-                                    <p><b>Top Level Domain:</b> {oneCountryDisplay.tld?.join(", ")}</p>
                                 </div>
                             </div>
 
-                            <div className="d-flex pt-5">
+                            <div className="d-flex pt-5 flex-wrap">
                                 <p className="me-3"><b>Border Countries:</b></p>
                                 {oneCountryDisplay.borders?.map((el, index) => {
-                                    const countryBorder = countriesData.find(c => c.cca3 === el)
+                                    // const countryBorder = countriesData.find(c => c.cca3 === el)
                                     return (
-                                        <p className="border rounded-1 me-2 text-center" key={index} style={{width: "100px"}}>{countryBorder?.name.common}</p>
+                                        <p className="border rounded-1 me-2 d-flex align-items-center justify-content-center" key={index} style={{width: "100px"}}>{el}</p>
                                     )
                                 })}
                             </div>
