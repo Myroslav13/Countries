@@ -31,7 +31,7 @@ function CountryList({mode, width, filter, filterSearch, oneCountryDisplay, setO
                                 return(
                                     <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-5" key={index}>
                                         <div className={`card ${mode === true ? "dark-mode": ""} border-0`} onClick={() => setOneCountryDisplay(el)}>
-                                            <img src={el.flags.svg} className="img-fluid flag-img" alt={el.name.common} />
+                                            <img src={el.flags.svg} className="img-fluid flag-img" title={el.name.common} alt={el.name.common} />
 
                                             <div className="card-body px-4 pb-5 pt-4">
                                                 <h5 className="card-title fw-bold">{el.name.common}</h5>
@@ -50,7 +50,7 @@ function CountryList({mode, width, filter, filterSearch, oneCountryDisplay, setO
                 <div className="px-5 pt-5 pb-5 px-md-auto pb-md-auto pt-md-auto ps-5" style={{paddingTop: "70px", minHeight: "590px"}}>
                     <div className={`row align-items-center ${mode === true ? "text-white": ""}`}>
                         <div className="col-12 col-lg-6">
-                            <img src={oneCountryDisplay?.flags.svg} className={`img-flag-detailed img-fluid border ${mode === true ? "border-black": ""}`} width={600}></img>
+                            <img src={oneCountryDisplay?.flags.svg} className={`img-flag-detailed img-fluid border ${mode === true ? "border-black": ""}`} title={oneCountryDisplay?.name.common} alt={oneCountryDisplay?.name.common} width={600}></img>
                         </div>
                         <div className="col-12 col-lg-6 pe-0 pe-lg-5">
                             <h1 className="fs-3 fw-bold pt-4 pt-lg-0">{oneCountryDisplay.name.common}</h1>
